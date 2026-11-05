@@ -1,265 +1,279 @@
-
 <!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CSS Fácil</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <style>
-        body {
-            background-color: #e9eef3;
-            color: #1d2939;
-            font-family: Arial, sans-serif;
-        }
+      body {
+        background-color: #e9eef3;
+        color: #1d2939;
+        font-family: Arial, sans-serif;
+      }
 
-        .caja1 {
-            min-height: 130px;
-            background-color: #172b4d;
-        }
+      .caja1 {
+        min-height: 130px;
+        background-color: #172b4d;
+      }
 
-        .caja2 {
-            height: 300px;
-            background-color: #294c73;
-        }
+      .caja2 {
+        height: 300px;
+        background-color: #294c73;
+      }
 
-        .caja3 {
-            min-height: 300px;
-            background-color: #294c73;
-            color: white;
-        }
+      .caja3 {
+        min-height: 300px;
+        background-color: #294c73;
+        color: white;
+      }
 
-        .caja4 {
-            min-height: 300px;
-            background-color: #8ba8c7;
-        }
+      .caja4 {
+        min-height: 300px;
+        background-color: #8ba8c7;
+      }
 
-        .caja5 {
-            min-height: 300px;
-            background-color: #d5e1ed;
-        }
+      .caja5 {
+        min-height: 300px;
+        background-color: #d5e1ed;
+      }
 
-        .caja6 {
-            min-height: 300px;
-            background-color: #b8cce0;
-        }
+      .caja6 {
+        min-height: 300px;
+        background-color: #b8cce0;
+      }
 
-        .caja7 {
-            min-height: 300px;
-            background-color: #294c73;
-            color: white;
-        }
+      .caja7 {
+        min-height: 300px;
+        background-color: #294c73;
+        color: white;
+      }
 
-        .caja8 {
-            min-height: 300px;
-            background-color: #527da5;
-            color: white;
-        }
+      .caja8 {
+        min-height: 300px;
+        background-color: #527da5;
+        color: white;
+      }
 
-        .caja9 {
-            min-height: 300px;
-            background-color: #d5e1ed;
-        }
+      .caja9 {
+        min-height: 300px;
+        background-color: #d5e1ed;
+      }
 
-        .caja10 {
-            min-height: 150px;
-            background-color: #172b4d;
-            color: white;
-        }
+      .caja10 {
+        min-height: 150px;
+        background-color: #172b4d;
+        color: white;
+      }
 
-        .icono {
-            width: 65px;
-            height: 65px;
-            border-radius: 0;
-            object-fit: cover;
-            border: 3px solid white;
-        }
+      .icono {
+        width: 65px;
+        height: 65px;
+        border-radius: 0;
+        object-fit: cover;
+        border: 3px solid white;
+      }
 
-        .btn-menu {
-            color: white;
-            border: 2px solid #91b5d6;
-            border-radius: 0;
-            padding: 10px 15px;
-            background-color: transparent;
-            transition: 0.3s;
-        }
+      .btn-menu {
+        color: white;
+        border: 2px solid #91b5d6;
+        border-radius: 0;
+        padding: 10px 15px;
+        background-color: transparent;
+        transition: 0.3s;
+      }
 
-        .btn-menu:hover {
-            background-color: #91b5d6;
-            color: #172b4d;
-        }
+      .btn-menu:hover {
+        background-color: #91b5d6;
+        color: #172b4d;
+      }
 
-        h4, h5 {
-            font-weight: bold;
-        }
+      h4,
+      h5 {
+        font-weight: bold;
+      }
 
-        pre {
-            border-radius: 0 !important;
-            border-left: 4px solid #294c73;
-            color: #172b4d;
-        }
+      pre {
+        border-radius: 0 !important;
+        border-left: 4px solid #294c73;
+        color: #172b4d;
+      }
 
-        .contenido {
-            padding: 25px;
-        }
+      .contenido {
+        padding: 25px;
+      }
 
-        section, aside, footer, header {
-            overflow: hidden;
-        }
+      section,
+      aside,
+      footer,
+      header {
+        overflow: hidden;
+      }
 
-        .imagen {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+      .imagen {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="container-fluid">
-        <div class="row">
+      <div class="row">
+        <!-- MENU -->
+        <nav
+          class="col-12 caja1 d-flex flex-wrap flex-row justify-content-center align-items-center gap-4 p-3"
+        >
+          <div class="d-flex flex-column align-items-center gap-2">
+            <img
+              class="icono"
+              src="img/icono-estructura.png"
+              alt="Icono estructura"
+            />
+            <a class="btn btn-menu" href="#">Estructura y Sintaxis</a>
+          </div>
 
-            <!-- MENU -->
-            <nav class="col-12 caja1 d-flex flex-wrap
-                flex-row justify-content-center align-items-center gap-4 p-3">
+          <div class="d-flex flex-column align-items-center gap-2">
+            <img
+              class="icono"
+              src="img/icono-especificidad.png"
+              alt="Icono especificidad"
+            />
+            <a class="btn btn-menu" href="#">Niveles de Especificidad</a>
+          </div>
 
-                <div class="d-flex flex-column align-items-center gap-2">
-                    <img class="icono" src="img/icono-estructura.png"
-                        alt="Icono estructura">
-                    <a class="btn btn-menu" href="#">Estructura y Sintaxis</a>
-                </div>
+          <div class="d-flex flex-column align-items-center gap-2">
+            <img
+              class="icono"
+              src="img/icono-pseudoclases.png"
+              alt="Icono pseudo clases"
+            />
+            <a class="btn btn-menu" href="/pseudo.html"
+              >Pseudo Clases y Pseudo Elementos</a
+            >
+          </div>
 
-                <div class="d-flex flex-column align-items-center gap-2">
-                    <img class="icono" src="img/icono-especificidad.png"
-                        alt="Icono especificidad">
-                    <a class="btn btn-menu" href="#">Niveles de Especificidad</a>
-                </div>
+          <div class="d-flex flex-column align-items-center gap-2">
+            <img
+              class="icono"
+              src="img/icono-boxmodel.png"
+              alt="Icono box model"
+            />
+            <a class="btn btn-menu" href="#">Box Model</a>
+          </div>
+        </nav>
 
-                <div class="d-flex flex-column align-items-center gap-2">
-                    <img class="icono" src="img/icono-pseudoclases.png"
-                        alt="Icono pseudo clases">
-                    <a class="btn btn-menu" href="#">Pseudo Clases y Pseudo Elementos</a>
-                </div>
+        <!-- BANNER -->
+        <header class="col-12 caja2 p-0">
+          <img
+            class="imagen"
+            src="img/banner-css.jpeg"
+            alt="Banner CSS Fácil"
+          />
+        </header>
 
-                <div class="d-flex flex-column align-items-center gap-2">
-                    <img class="icono" src="img/icono-boxmodel.png"
-                        alt="Icono box model">
-                    <a class="btn btn-menu" href="#">Box Model</a>
-                </div>
+        <!-- QUE ES CSS -->
+        <aside class="col-12 col-md-4 caja3 contenido">
+          <h4>¿Qué es CSS?</h4>
+          <p>
+            CSS (Cascading Style Sheets u hojas de estilo en cascada) es un
+            lenguaje de diseño gráfico que se utiliza para definir la apariencia
+            visual, el color, la tipografía, los márgenes y la maquetación de
+            los documentos escritos en HTML o XML
+          </p>
+        </aside>
 
-            </nav>
+        <!-- IMAGEN CSS -->
+        <section class="col-12 col-md-4 caja4 p-0">
+          <img class="imagen" src="img/css-codigo.jpeg" alt="Código CSS" />
+        </section>
 
-            <!-- BANNER -->
-            <header class="col-12 caja2 p-0">
-                <img class="imagen" src="img/banner-css.jpeg"
-                    alt="Banner CSS Fácil">
-            </header>
+        <!-- ESTRUCTURA -->
+        <aside class="col-12 col-md-4 caja5 contenido">
+          <h4>Estructura y sintaxis</h4>
+          <p>
+            Una regla CSS se compone de un selector y un bloque de
+            declaraciones:
+          </p>
 
-            <!-- QUE ES CSS -->
-            <aside class="col-12 col-md-4 caja3 contenido">
-                <h4>¿Qué es CSS?</h4>
-                <p>
-                    CSS (Cascading Style Sheets) es el lenguaje que le da
-                    color, tamaño y forma al HTML. Permite diseñar páginas
-                    web atractivas y organizadas.
-                </p>
-            </aside>
-
-            <!-- IMAGEN CSS -->
-            <section class="col-12 col-md-4 caja4 p-0">
-                <img class="imagen" src="img/css-codigo.jpeg"
-                    alt="Código CSS">
-            </section>
-
-            <!-- ESTRUCTURA -->
-            <aside class="col-12 col-md-4 caja5 contenido">
-                <h4>Estructura y sintaxis</h4>
-                <p>
-                    Una regla CSS se compone de un selector y un bloque
-                    de declaraciones:
-                </p>
-
-                <pre class="bg-white p-3"><code>selector {
+          <pre class="bg-white p-3"><code>selector {
     propiedad: valor;
 }</code></pre>
-            </aside>
+        </aside>
 
-            <!-- BOX MODEL -->
-            <section class="col-12 col-md-8 caja6 contenido">
-                <h4>Box Model</h4>
-                <p>
-                    Todo elemento es una caja formada por contenido,
-                    padding, borde y margen.
-                </p>
+        <!-- BOX MODEL -->
+        <section class="col-12 col-md-8 caja6 contenido">
+          <h4>Box Model</h4>
+          <p>
+            Todo elemento es una caja formada por contenido, padding, borde y
+            margen.
+          </p>
 
-                <pre class="bg-white p-3"><code>.caja {
+          <pre class="bg-white p-3"><code>.caja {
     width: 200px;
     padding: 10px;
     border: 2px solid black;
     margin: 20px;
 }</code></pre>
-            </section>
+        </section>
 
-            <!-- SELECTORES -->
-            <section class="col-12 col-md-4 col-xl-2 caja7 contenido">
-                <img class="icono mb-3"
-                    src="img/icono-estructura.png"
-                    alt="Icono estructura">
+        <!-- SELECTORES -->
+        <section class="col-12 col-md-4 col-xl-2 caja7 contenido">
+          <img
+            class="icono mb-3"
+            src="img/icono-estructura.png"
+            alt="Icono estructura"
+          />
 
-                <h5>Selectores</h5>
-                <p>
-                    Eligen a qué etiquetas se les aplica el estilo:
-                    <code>p</code>, <code>.clase</code>,
-                    <code>#id</code>.
-                </p>
-            </section>
+          <h5>Selectores</h5>
+          <p>
+            Eligen a qué etiquetas se les aplica el estilo:
+            <code>p</code>, <code>.clase</code>, <code>#id</code>.
+          </p>
+        </section>
 
-            <!-- ESPECIFICIDAD -->
-            <section class="col-12 col-md-4 col-xl-2 caja8 contenido">
-                <img class="icono mb-3"
-                    src="img/icono-especificidad.png"
-                    alt="Icono especificidad">
+        <!-- ESPECIFICIDAD -->
+        <section class="col-12 col-md-4 col-xl-2 caja8 contenido">
+          <img
+            class="icono mb-3"
+            src="img/icono-especificidad.png"
+            alt="Icono especificidad"
+          />
 
-                <h5>Especificidad</h5>
-                <p>
-                    Define qué estilo gana:
-                    etiqueta, clase, id y estilo en línea.
-                </p>
-            </section>
+          <h5>Especificidad</h5>
+          <p>Define qué estilo gana: etiqueta, clase, id y estilo en línea.</p>
+        </section>
 
-            <!-- PSEUDOCLASES -->
-            <section class="col-12 col-md-4 col-xl-4 caja9 contenido">
-                <img class="icono mb-3"
-                    src="img/icono-pseudoclases.png"
-                    alt="Icono pseudo clases">
+        <!-- PSEUDOCLASES -->
+        <section class="col-12 col-md-4 col-xl-4 caja9 contenido">
+          <img
+            class="icono mb-3"
+            src="img/icono-pseudoclases.png"
+            alt="Icono pseudo clases"
+          />
 
-                <h5>Pseudo clases</h5>
-                <p>
-                    Estilos según el estado:
-                    <code>a:hover</code>,
-                    <code>li:first-child</code>,
-                    <code>p::before</code>.
-                </p>
-            </section>
+          <h5>Pseudo clases</h5>
+          <p>
+            Estilos según el estado:
+            <code>a:hover</code>, <code>li:first-child</code>,
+            <code>p::before</code>.
+          </p>
+        </section>
 
-            <!-- FOOTER -->
-            <footer class="col-12 col-xl-4 caja10 contenido">
-                <h5>CSS Fácil</h5>
-                <p>
-                    Programación web paso a paso:
-                    HTML, CSS y más.
-                </p>
-            </footer>
-
-        </div>
+        <!-- FOOTER -->
+        <footer class="col-12 col-xl-4 caja10 contenido">
+          <h5>CSS Fácil</h5>
+          <p>Programación web paso a paso: HTML, CSS y más.</p>
+        </footer>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
+  </body>
 </html>
