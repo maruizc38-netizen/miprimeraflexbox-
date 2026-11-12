@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSS Fácil - Niveles de Especificidad</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+
+        <!-- MENÚ -->
+        <nav class="col-12 caja1 d-flex flex-wrap justify-content-center align-items-center gap-3 p-3">
+
+          <div class="menu-item d-flex flex-column align-items-center gap-2">
+            <img class="icono" src="img/icono-estructura.png" alt="Estructura">
+            <a class="btn btn-menu" href="./index.html">Estructura y Sintaxis</a>
+          </div>
+
+          <div class="menu-item d-flex flex-column align-items-center gap-2">
+            <img class="icono" src="img/icono-especificidad.png" alt="Especificidad">
+            <a class="btn btn-menu" href="./especificidad.html">Niveles de Especificidad</a>
+          </div>
+
+          <div class="menu-item d-flex flex-column align-items-center gap-2">
+            <img class="icono" src="img/icono-pseudoclases.png" alt="Pseudoclases">
+            <a class="btn btn-menu" href="./pseudo.html">Pseudoclases </a>
+          </div>
+
+          <div class="menu-item d-flex flex-column align-items-center gap-2">
+            <img class="icono" src="img/icono-boxmodel.png" alt="Box Model">
+            <a class="btn btn-menu" href="boxmodel.html">Box Model</a>
+          </div>
+
+        </nav>
+
+        <!-- BANNER -->
+        <header class="col-12 caja2 p-0">
+          <img
+            class="imagen"
+            src="img/banner-css.jpg"
+            alt="Banner de especificidad CSS"
+          />
+        </header>

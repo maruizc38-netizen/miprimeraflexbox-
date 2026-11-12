@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSS Fácil - Niveles de Especificidad</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- MENÚ -->
+        <nav
+          class="col-12 caja1 d-flex flex-wrap justify-content-center align-items-center gap-3 p-3"
+        >
+          <div class="menu-item d-flex flex-column align-items-center gap-2">
+            <img
+              class="icono"
+              src="img/icono-estructura.png"
+              alt="Estructura"
+            />
+            <a class="btn btn-menu" href="./index.html"
+              >Estructura y Sintaxis</a
+            >
+          </div>
+
+          <div class="menu-item d-flex flex-column align-items-center gap-2">
+            <img
+              class="icono"
+              src="img/icono-especificidad.png"
+              alt="Especificidad"
+            />
+            <a class="btn btn-menu" href="./especificidad.html"
+              >Niveles de Especificidad</a
+            >
+          </div>
+
+          <div class="menu-item d-flex flex-column align-items-center gap-2">
+            <img
+              class="icono"
+              src="img/icono-pseudoclases.png"
+              alt="Pseudoclases"
+            />
+            <a class="btn btn-menu" href="./pseudo.html">Pseudoclases </a>
+          </div>
+
+          <div class="menu-item d-flex flex-column align-items-center gap-2">
+            <img class="icono" src="img/icono-boxmodel.png" alt="Box Model" />
+            <a class="btn btn-menu" href="boxmodel.html">Box Model</a>
+          </div>
+        </nav>
+
+        <!-- BANNER -->
+        <header class="col-12 caja2 p-0">
+          <img
+            class="imagen"
+            src="img/banner-css.jpg"
+            alt="Banner de especificidad CSS"
+          />
+        </header>
+
+        <!-- INTRODUCCIÓN -->
+        <section class="col-12 caja5 p-4">
+          <h1>¿Qué es la especificidad en CSS?</h1>
+
+          <p>
+            La especificidad es el sistema que utiliza CSS para determinar qué
+            regla de estilo tiene prioridad cuando varios selectores intentan
+            modificar el mismo elemento HTML.
+          </p>
+
+          <p>
+            Cada selector tiene un nivel de prioridad. Cuanto más específico sea
+            un selector, mayor será su prioridad frente a otros selectores que
+            intenten aplicar estilos al mismo elemento.
+          </p>
+
+          <p>
+            Los niveles principales de especificidad son: estilos en línea,
+            identificadores, clases y pseudoclases, y elementos y
+            pseudoelementos.
+          </p>
+        </section>
+
+        <!-- NIVEL 1 -->
+        <div class="row g-0">
+          <section class="col-12 col-md-6 col-lg-4 caja2 p-3">
+            <img
+              class="imagen-pseudoclase"
+              src="img/inline.png"
+              alt="Ejemplo de estilos en línea"
+            />
+
+            <h2>1. Estilos en línea</h2>
+
+            <p>
+              Son los estilos que se escriben directamente dentro de la etiqueta
+              HTML mediante el atributo style. Tienen una prioridad alta frente
+              a las reglas normales de las hojas de estilo.
+            </p>
+
+            <h3>Ejemplo:</h3>
+
+            <pre><code>&lt;p style="color: red;"&gt;
+  Texto de ejemplo
+&lt;/p&gt;</code></pre>
+          </section>
+
+          <!-- NIVEL 2 -->
+          <section class="col-12 col-md-6 col-lg-4 caja3 p-3">
+            <img
+              class="imagen-pseudoclase"
+              src="img/id.png"
+              alt="Ejemplo de selector ID"
+            />
+
+            <h2>2. Identificadores (ID)</h2>
+
+            <p>
+              Los identificadores permiten seleccionar un elemento HTML
+              específico mediante el atributo id. En CSS se representan
+              utilizando el símbolo numeral (#).
+            </p>
+
+            <h3>Ejemplo:</h3>
+
+            <pre><code>#titulo {
+  color: blue;
+}</code></pre>
+          </section>
+
+          <!-- NIVEL 3 -->
+          <section class="col-12 col-md-6 col-lg-4 caja4 p-3">
+            <img
+              class="imagen-pseudoclase"
+              src="img/clases.png"
+              alt="Ejemplo de clases CSS"
+            />
+
+            <h2>3. Clases, atributos y pseudoclases</h2>
+
+            <p>
+              Estos selectores permiten identificar elementos por medio de
+              clases, atributos o estados específicos. En este nivel se
+              encuentran las clases (.), los selectores de atributos y las
+              pseudoclases (:).
+            </p>
+
+            <h3>Ejemplo:</h3>
+
+            <pre class="text-black"><code>.texto {
+  color: green;
+}
+
+input:focus {
+  border: 2px solid blue;
+}</code></pre>
+          </section>
+
+          <!-- NIVEL 4 -->
+          <section class="col-12 col-md-6 col-lg-4 caja5 p-3">
+            <img
+              class="imagen-pseudoclase"
+              src="img/elementos.png"
+              alt="Ejemplo de selectores de elementos"
+            />
+
+            <h2>4. Elementos y pseudoelementos</h2>
+
+            <p>
+              Este nivel incluye los selectores que identifican etiquetas HTML,
+              como p, h1 o div, y los pseudoelementos, que permiten modificar
+              partes específicas de un elemento.
+            </p>
+
+            <h3>Ejemplo:</h3>
+
+            <pre class="text-black"><code>p {
+  color: black;
+}
+
+p::first-letter {
+  font-size: 30px;
+}</code></pre>
+          </section>
+
+          <!-- SELECTOR UNIVERSAL -->
+          <section class="col-12 col-md-6 col-lg-4 caja6 p-3">
+            <img
+              class="imagen-pseudoclase"
+              src="img/universal.png"
+              alt="Ejemplo de selector universal"
+            />
+
+            <h2>5. Selector universal</h2>
+
+            <p>
+              El selector universal se representa con un asterisco (*).
+              Selecciona todos los elementos HTML, pero no aporta valor a la
+              especificidad.
+            </p>
+
+            <h3>Ejemplo:</h3>
+
+            <pre class="text-black"><code>* {
+  margin: 0;
+  padding: 0;
+}</code></pre>
+          </section>
+        </div>
+
+        <!-- RESUMEN -->
+        <section class="col-12 caja7 p-4">
+          <h2>Resumen de la especificidad</h2>
+
+          <p>De mayor a menor prioridad en las reglas normales:</p>
+
+          <ol>
+            <li>Estilos en línea.</li>
+            <li>Identificadores (ID).</li>
+            <li>Clases, atributos y pseudoclases.</li>
+            <li>Elementos y pseudoelementos.</li>
+          </ol>
+
+          <p>
+            El selector universal (*) y los combinadores no aportan
+            especificidad.
+          </p>
+
+          <p>
+            Recuerda: cuando dos reglas tienen la misma especificidad,
+            normalmente se aplica la que aparece después en el código, siempre
+            que tengan el mismo origen e importancia.
+          </p>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
+```
