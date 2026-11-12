@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS Fácil</title>
+    <title>CSS FÃ¡cil</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -81,6 +81,59 @@
         border: 3px solid white;
       }
 
+      .imagen-pseudoclase {
+        display: block;
+        width: 100%;
+        height: 120px;
+        object-fit: contain;
+        margin-bottom: 12px;
+      }
+
+      .menu-item {
+        flex: 0 1 210px;
+        min-width: 0;
+      }
+
+      .imagen-codigo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media (max-width: 575.98px) {
+        .caja1 {
+          gap: 12px !important;
+        }
+
+        .menu-item {
+          flex: 1 1 calc(50% - 12px);
+        }
+
+        .btn-menu {
+          width: 100%;
+          min-height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 8px;
+          font-size: 0.85rem;
+        }
+      }
+
+      @media (min-width: 576px) and (max-width: 1024px) {
+        .menu-item {
+          flex: 1 1 calc(50% - 16px);
+          max-width: 260px;
+        }
+
+      }
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .imagen-codigo {
+          display: none;
+        }
+      }
+
       .btn-menu {
         color: white;
         border: 2px solid #91b5d6;
@@ -101,18 +154,20 @@
     <div class="container-fluid">
       <div class="row">
         <nav
-          class="col-12 caja1 d-flex flex-wrap flex-row justify-content-center align-items-center gap-4 p-3"
+          class="col-12 caja1 d-flex flex-wrap flex-row justify-content-center align-items-center gap-3 p-3"
         >
-          <div class="d-flex flex-column align-items-center gap-2">
+          <div class="menu-item d-flex flex-column align-items-center gap-2">
             <img
               class="icono"
               src="img/icono-estructura.png"
               alt="Icono estructura"
             />
-            <a class="btn btn-menu" href="./index.html">Estructura y Sintaxis</a>
+            <a class="btn btn-menu" href="./index.html"
+              >Estructura y Sintaxis</a
+            >
           </div>
 
-          <div class="d-flex flex-column align-items-center gap-2">
+          <div class="menu-item d-flex flex-column align-items-center gap-2">
             <img
               class="icono"
               src="img/icono-especificidad.png"
@@ -121,7 +176,7 @@
             <a class="btn btn-menu" href="#">Niveles de Especificidad</a>
           </div>
 
-          <div class="d-flex flex-column align-items-center gap-2">
+          <div class="menu-item d-flex flex-column align-items-center gap-2">
             <img
               class="icono"
               src="img/icono-pseudoclases.png"
@@ -132,7 +187,7 @@
             >
           </div>
 
-          <div class="d-flex flex-column align-items-center gap-2">
+          <div class="menu-item d-flex flex-column align-items-center gap-2">
             <img
               class="icono"
               src="img/icono-boxmodel.png"
@@ -146,7 +201,7 @@
           class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-12 col-xxl-12 caja2 p-0 position-relative"
         >
           <img
-            class="w-100 h-100 object-fit-cover"
+            class="imagen-codigo"
             src="img/bannerdepseudoclases.jpg"
             alt="Banner pseuclases"
           />
@@ -157,13 +212,13 @@
         </header>
 
         <aside class="col-12 col-md-12 col-lg-6 caja3 text-white p-3">
-          <h1>¿Qué es una pseudoclase CSS?</h1>
+          <h1>Â¿QuÃ© es una pseudoclase CSS?</h1>
 
           <p>
             Las pseudoclases se utilizan para hacer referencia a elementos HTML
             que tengan un cierto comportamiento concreto. Volvamos a recordar el
-            esquema general de sintaxis de CSS, donde ahora añadiremos las
-            pseudoclases, que se definen añadiendo dos puntos antes del nombre
+            esquema general de sintaxis de CSS, donde ahora aÃ±adiremos las
+            pseudoclases, que se definen aÃ±adiendo dos puntos antes del nombre
             de la pseudoclase concreta, de la siguiente forma:
           </p>
         </aside>
@@ -172,35 +227,29 @@
           <img
             class="w-100 h-100 object-fit-cover"
             src="img/css-codigo.jpeg"
-            alt="Código CSS"
+            alt="CÃ³digo CSS"
           />
         </aside>
 
-        <div class="row">
-          <div class="col-6 col-md-4 col-lg-2 caja2">Caja 1</div>
-          <div class="col-6 col-md-4 col-lg-2 caja3">Caja 2</div>
-          <div class="col-6 col-md-4 col-lg-2 caja4">Caja 3</div>
-          <div class="col-6 col-md-4 col-lg-2 caja5">Caja 4</div>
-          <div class="col-6 col-md-4 col-lg-2 caja6">Caja 5</div>
-          <div class="col-6 col-md-4 col-lg-2 caja7">Caja 6</div>
-        </div>
-
-        <div class="row">
-          <div class="col-6 col-md-4 col-lg-2 caja7">Caja 1</div>
-          <div class="col-6 col-md-4 col-lg-2 caja6">Caja 2</div>
-          <div class="col-6 col-md-4 col-lg-2 caja5">Caja 3</div>
-          <div class="col-6 col-md-4 col-lg-2 caja4">Caja 4</div>
-          <div class="col-6 col-md-4 col-lg-2 caja3">Caja 5</div>
-          <div class="col-6 col-md-4 col-lg-2 caja2">Caja 6</div>
-        </div>
-
-        <div class="row">
-          <div class="col-6 col-md-4 col-lg-2 caja2">Caja 1</div>
-          <div class="col-6 col-md-4 col-lg-2 caja3">Caja 2</div>
-          <div class="col-6 col-md-4 col-lg-2 caja4">Caja 3</div>
-          <div class="col-6 col-md-4 col-lg-2 caja5">Caja 4</div>
-          <div class="col-6 col-md-4 col-lg-2 caja6">Caja 5</div>
-          <div class="col-6 col-md-4 col-lg-2 caja7">Caja 6</div>
+        <div class="row g-0">
+          <div class="col-6 col-md-4 col-lg-2 caja2 p-3"><img class="imagen-pseudoclase" src="img/hover.png" alt="Ilustración de :hover" /><h2>:hover</h2><p>Selecciona un elemento cuando el usuario pasa el cursor sobre Ã©l.</p></div>
+          <div class="col-6 col-md-4 col-lg-2 caja3 p-3"><img class="imagen-pseudoclase" src="img/active.png" alt="Ilustración de :active" /><h2>:active</h2><p>Selecciona un elemento mientras el usuario lo estÃ¡ activando, por ejemplo, al hacer clic en un enlace.</p></div>
+          <div class="col-6 col-md-4 col-lg-2 caja4 p-3"><img class="imagen-pseudoclase" src="img/focus.png" alt="Ilustración de :focus" /><h2>:focus</h2><p>Selecciona el elemento que tiene el foco, como un campo de formulario seleccionado con el teclado.</p></div>
+          <div class="col-6 col-md-4 col-lg-2 caja5 p-3"><img class="imagen-pseudoclase" src="img/visited.png" alt="Ilustración de :visited" /><h2>:visited</h2><p>Selecciona los enlaces que el usuario ya visitÃ³.</p></div>
+          <div class="col-6 col-md-4 col-lg-2 caja6 p-3"><img class="imagen-pseudoclase" src="img/first-child.png" alt="Ilustración de :first-child" /><h2>:first-child</h2><p>Selecciona un elemento cuando es el primer hijo de su elemento padre.</p></div>
+          <div class="col-6 col-md-4 col-lg-2 caja7 p-3"><img class="imagen-pseudoclase" src="img/last-child.png" alt="Ilustración de :last-child" /><h2>:last-child</h2><p>Selecciona un elemento cuando es el Ãºltimo hijo de su elemento padre.</p></div>
+          <div class="col-6 col-md-4 col-lg-2 caja7 p-3"><img class="imagen-pseudoclase" src="img/nth-child.png" alt="Ilustración de :nth-child(n)" /><h2>:nth-child(n)</h2><p>Selecciona un elemento segÃºn su posiciÃ³n entre los hijos; permite usar nÃºmeros o patrones como even y odd.</p></div>
+          <div class="col-6 col-md-4 col-lg-2 caja6 p-3"><img class="imagen-pseudoclase" src="img/first-of-type.png" alt="Ilustración de :first-of-type" /><h2>:first-of-type</h2><p>Selecciona el primer elemento de ese tipo entre sus hermanos.</p></div>
+          <div class="col-6 col-md-4 col-lg-2 caja5 p-3"><img class="imagen-pseudoclase" src="img/last-of-type.png" alt="Ilustración de :last-of-type" /><h2>:last-of-type</h2><p>Selecciona el Ãºltimo elemento de ese tipo entre sus hermanos.</p></div>
+          <div class="col-6 col-md-4 col-lg-2 caja4 p-3"><img class="imagen-pseudoclase" src="img/not-selector.png" alt="Ilustración de :not(selector)" /><h2>:not(selector)</h2><p>Selecciona los elementos que no coinciden con el selector indicado.</p></div>
+          <div class="col-6 col-md-4 col-lg-2 caja3 p-3"><img class="imagen-pseudoclase" src="img/cheked.png" alt="Ilustración de :checked" /><h2>:checked</h2><p>Selecciona casillas de verificaciÃ³n u opciones que estÃ¡n marcadas.</p></div>
+          <div class="col-6 col-md-4 col-lg-2 caja2 p-3"><img class="imagen-pseudoclase" src="img/disable.png" alt="Ilustración de :disabled" /><h2>:disabled</h2><p>Selecciona los controles de formulario que estÃ¡n deshabilitados.</p></div>
+          <div class="col-6 col-md-4 col-lg-2 caja2 p-3"><img class="imagen-pseudoclase" src="img/enable.png" alt="Ilustración de :enabled" /><h2>:enabled</h2><p>Selecciona los controles de formulario que estÃ¡n habilitados.</p></div>
+          <div class="col-6 col-md-4 col-lg-2 caja3 p-3"><img class="imagen-pseudoclase" src="img/required.png" alt="Ilustración de :required" /><h2>:required</h2><p>Selecciona los campos de formulario que deben completarse antes de enviar.</p></div>
+          <div class="col-6 col-md-4 col-lg-2 caja4 p-3"><img class="imagen-pseudoclase" src="img/valid .png" alt="Ilustración de :valid" /><h2>:valid</h2><p>Selecciona un campo cuyo valor cumple las reglas de validaciÃ³n.</p></div>
+          <div class="col-6 col-md-4 col-lg-2 caja5 p-3"><img class="imagen-pseudoclase" src="img/invalid.png" alt="Ilustración de :invalid" /><h2>:invalid</h2><p>Selecciona un campo cuyo valor no cumple las reglas de validaciÃ³n.</p></div>
+          <div class="col-6 col-md-4 col-lg-2 caja6 p-3"><img class="imagen-pseudoclase" src="img/empty .png" alt="Ilustración de :empty" /><h2>:empty</h2><p>Selecciona un elemento que no tiene hijos ni contenido de texto.</p></div>
+          <div class="col-6 col-md-4 col-lg-2 caja7 p-3"><img class="imagen-pseudoclase" src="img/root.png" alt="Ilustración de :root" /><h2>:root</h2><p>Selecciona el elemento raÃ­z del documento; en HTML, normalmente es &lt;html&gt;.</p></div>
         </div>
       </div>
     </div>
